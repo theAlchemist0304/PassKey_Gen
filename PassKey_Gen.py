@@ -20,7 +20,7 @@ def Create_Pass():
         randpass.append(choice(TheChoice))
         
     result = "".join(randpass)
-    TheResult = "Your Password: {result}"
+    TheResult = f"Your Password: {result}"
     resultbox.config(text=TheResult)
 
 # Copy function
@@ -129,8 +129,8 @@ resultbox = Label(window,
                  font=("Poppins", 14),
                  fg="black",  # Changed text color to black
                  bg="white",  # Changed background to white
-                 wraplength=600)
-resultbox.place(relx=0.5, rely=0.75, anchor="center")
+                 wraplength=600,borderwidth=3,relief="solid",height=2,width=40)
+resultbox.place(relx=0.5, rely=0.8, anchor="center")
 
 # Make resultbox selectable
 resultbox.config(text="Your Password will appear here", anchor="center", justify="center")  # Added default text
